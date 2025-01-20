@@ -14,6 +14,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,6 +41,8 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
-    "@types/react-dom": "^19.0.3"
-  }
+    "@types/react-dom": "^19.0.3",
+    "gh-pages": "^6.3.0"
+  },
+  "homepage": "https://arman-07.github.io/todo-app-react/"
 }
