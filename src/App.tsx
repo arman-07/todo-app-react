@@ -35,12 +35,20 @@ const App: React.FC = () => {
     <Container>
       <h1>ToDo List</h1>
       <TaskInput addTask={addTask} />
-      <h2>All Tasks</h2>
-      <TaskList tasks={allTasks} toggleTaskCompletion={toggleTaskCompletion} />
-      <h2>Active Tasks</h2>
-      <TaskList tasks={activeTasks} toggleTaskCompletion={toggleTaskCompletion} />
-      <h2>Completed Tasks</h2>
-      <TaskList tasks={completedTasks} toggleTaskCompletion={toggleTaskCompletion} />
+      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <div>
+          <h2>All Tasks</h2>
+          <TaskList tasks={allTasks} toggleTaskCompletion={toggleTaskCompletion} />
+        </div>
+        <div>
+          <h2>Active Tasks</h2>
+          <TaskList tasks={activeTasks} toggleTaskCompletion={toggleTaskCompletion} />
+        </div>
+        <div>
+          <h2>Completed Tasks</h2>
+          <TaskList tasks={completedTasks} toggleTaskCompletion={toggleTaskCompletion} />
+        </div>
+      </div>
     </Container>
   );
 };

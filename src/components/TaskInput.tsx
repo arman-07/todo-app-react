@@ -16,14 +16,15 @@ const TaskInput: React.FC<TaskInputProps> = ({ addTask }) => {
   };
 
   return (
-    <div>
+    <div style={{display: 'flex', }}>
       <TextField
+        style={{width: '80%'}}
         label="New Task"
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
-        onKeyPress={(e) => e.key === 'Enter' && handleAddTask()}
+        onKeyDown={(e) => e.key === 'Enter' && handleAddTask()}
       />
-      <Button onClick={handleAddTask} variant="contained" color="primary">
+      <Button onClick={handleAddTask} variant="contained" color="primary" style={{marginLeft: '10%'}}>
         Add Task
       </Button>
     </div>
